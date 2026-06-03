@@ -21,6 +21,8 @@ spec:
         env:
         - name: REDIS_URL
           value: "redis://redis-master.demo.svc.cluster.local:6379"
+        - name: MONGO_URL
+          value: "mongodb://mongodb.demo.svc.cluster.local:27017/beerapp" 
         - name: SESSION_SECRET
           valueFrom:
             secretKeyRef:
