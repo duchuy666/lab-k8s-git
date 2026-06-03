@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  .auth-container
+    h2 Login
+    if error
+      p.error= error
+    form(method='POST' action='/login')
+      .form-group
+        label Username
+        input(type='text' name='username' placeholder='Enter username' required)
+      .form-group
+        label Password
+        input(type='password' name='password' placeholder='Enter password' required)
+      button(type='submit') Login
+    p.auth-link Don't have an account? 
+      a(href='/register') Register here
